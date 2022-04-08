@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <swiper
+    [config]="config"
+    [autoplay]="true"
+    [keyboard]="true"
+    [pagination]="true"
+    [zoom]="true"
+  >
+  <ng-template swiperSlide *ngFor="let slide of slides">
+    <div class="swiper-slide-design">
+      <ion-icon name="close"></ion-icon>
+      <img src="../../assets/img/logo.png" alt="Platzi Music Logo" />
+      <h1>{{slide.title}}</h1>
+      <h2>{{slide.subTitle}}</h2>
+      <p>{{slide.description}}</p>
+      <ion-icon name="{{slide.icon}}"></ion-icon>
+    </div>
+  </ng-template>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </swiper>
 </ion-content>
