@@ -1,0 +1,7 @@
+{
+  "name": "platzimusic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
